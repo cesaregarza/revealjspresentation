@@ -1,0 +1,86 @@
+$primary: #008700;
+$secondary: lighten($primary, 7%);
+
+h2{
+  color: $secondary!important;
+}
+
+p.subtitle{
+  color: $primary;
+  font-size: 1.2rem;
+}
+
+.emphasis{
+  color: $primary;
+  font-size: 1.2em!important;
+  font-weight: 900!important;
+}
+.redEmphasis{
+  color: red;
+  font-size: 1.2em!important;
+  font-weight: 900!important;
+}
+
+.plusLevel{
+  list-style-type: upper-roman;
+  font-size: 0.7em;
+  .plusLevel{
+    list-style-type: upper-alpha;
+    font-size: 0.8em;
+    .plusLevel{
+      list-style-type: lower-roman;
+      .plusLevel{
+        list-style-type: lower-alpha;
+      }
+    }
+  }
+}
+
+ol li{
+  max-height: 0;
+}
+ol li.show{
+  max-height: 25vh;
+}
+
+#fade{
+  font-size: 0.5em;
+}
+
+
+#fade, #fade2, #fade3{
+  li{
+    transition: all 1s ease-out;
+    opacity: 0;
+  }
+  li.show{
+    opacity: 1;
+  }
+}
+
+.big{
+  height: 90vh;
+}
+
+#section3{
+  max-height: auto;
+  height: auto;
+}
+
+#meanstack{
+  max-width: 100%;
+  height: auto;
+}
+
+.row{
+  display: flex;
+}
+.column{
+  flex: 50%;
+}
+
+#globemath{
+  max-width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+}

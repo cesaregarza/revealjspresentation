@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="/reveal.js/css/theme/moon.css">
+        <title>Presentation</title>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="zoom-out">
+					<h2>Pets RGV</h2>
+					<p>A MEAN Stack Webapp by Cesar E. Garza and Jaime Meza</p>
+				</section>
+				<section id="fade" data-transition= "zoom-in slide-out">
+					<h2>Table of Contents</h2>
+					<div class="parents">
+						<ol class="plusLevel fragment big" data-fragment-index="1">
+							<li>
+								Goals
+							</li>
+							<li class="parents">
+								Technologies
+								<div id="fade2">
+									<ol class="plusLevel fragment" data-fragment-index="2">
+										<li class="parents">
+											<span class="emphasis">MEAN</span> Stack
+											<div id="fade3">
+												<ol class="plusLevel fragment" data-fragment-index="3">
+													<li><span class="emphasis">M</span>ongoDB</li> 
+													<li><span class="emphasis">E</span>xpress</li>
+													<li><span class="emphasis">A</span>ngular 6</li>
+													<li><span class="emphasis">N</span>ode.js</li>
+												</ol>
+											</div>
+										</li>
+										<li>
+											RESTful API
+										</li>
+										<li>
+											Cross-Origin Resource Sharing (CORS)
+										</li>
+									</ol>
+								</div>
+							</li>
+							<li class="parents">
+								Serverside (Back-End)
+								<ol class="plusLevel fragment" data-fragment-index="4">
+									<li>Node.js</li>
+									<li>Express</li>
+									<li class="parents">Authentication
+										<ol class="plusLevel fragment" data-fragment-index="5">
+											<li>Passport.js</li>
+											<li>Sessions</li>
+											<li>Token Validation</li>
+										</ol>
+									</li>
+									<li>Security</li>
+								</ol>
+							</li>
+							<li class="parents">Clientside (Front-End)
+								<ol class="plusLevel fragment" data-fragment-index="6">
+									<li>Angular 6</li>
+									<li>SASS</li>
+									<li>Form Validation</li>
+									<li>Token Retrieval</li>
+								</ol>
+							</li>
+							<li>Database</li>
+							<li>Challenges</li>
+							<li>Deleted or Delayed Features</li>
+							<li>Conclusion</li>
+						</ol>
+					</div>
+				</section>
+				<section>
+					<h2>Goals</h2>
+					<ul>
+						<li class="fragment">
+							Create a stable, robust <span class="emphasis">back-end</span>
+						</li>
+						<li class="fragment">
+							Create a user-friendly <span class="emphasis">front-end</span>
+						</li>
+						<li class="fragment">
+							Create a secure but flexible <span class="emphasis">database</span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Technologies</h2>
+					<div class="row">
+						<div class="column">
+							<ul>
+								<li class="fragment" data-fragment-index="1"><span class="emphasis">MEAN</span> Stack</li>
+								<div class="fragment">
+									<li><span class="emphasis">M</span>ongoDB</li>
+									<li><span class="emphasis">E</span>xpress</li>
+									<li><span class="emphasis">A</span>ngular 6</li>
+									<li><span class="emphasis">N</span>ode.js</li>
+								</div>
+								<li class="fragment">RESTful API</li>
+								<li class="fragment">Cross-Origin Resource Sharing (CORS)</li>
+							</ul>
+						</div>
+						<div class="column">
+								<img class="fragment" data-fragment-index="1" id="meanstack" src="/PetsRGV/Assets/Mean-Stack-750x330.png">
+						</div>
+					</div>
+				</section>
+				<section>
+					<section>
+						<h2>Serverside (Back-End)</h2>
+						<p class="fragment">We wanted to have a powerful but flexible back-end that we could keep adding to in the future and new people can come along and edit it easily</p>
+					</section>
+					<section>
+						<h2>Node.js</h2>
+						<ul>
+							<li class="fragment">
+								Powerful
+							</li>
+							<li class="fragment">
+								Flexible
+							</li>
+							<li class="fragment">
+								Most Popular Framework
+								<span class="fragment">(According to StackOverflow)</span>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Express</h2>
+						<ul>
+							<li class="fragment">
+								Framework for node.js
+							</li>
+							<li class="fragment">Easy to learn</li>
+							<li class="fragment">Widespread developer support</li>
+							<li class="fragment"><span class="emphasis">Sublime</span> documentation</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Authentication</h2>
+						<h4 class="fragment">Passport.js</h4>
+						<ul>
+							<li class="fragment">Very flexible, tons of "strategies" available online</li>
+							<li class="fragment">Powerful</li>
+							<li class="fragment">Injects itself into express-sessions</li>
+							<li class="fragment">Simple to use for token validation</li>
+							<li class="fragment"><span class="redEmphasis">Awful</span>, outdated documentation</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Security</h2>
+						<ul>
+							<li class="fragment">Security is very important to us</li>
+							<li class="fragment">Passwords hashed using state-of-the-art encryption in <span class="emphasis">scrypt</span></li>
+							<li class="fragment"><span class="emphasis">HTTPS</span> fully implemented throughout the webapp</li>
+							<li class="fragment">Authentication guards placed at crucial areas</li>
+							<li class="fragment">
+								Server currently only accepts valid requests from the front-end's URL.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Clientside (Front-End)</h2>
+						<p class="fragment">We wanted to have a user-friendly, single-page application that was <span class="emphasis">flexible</span> but <span class="emphasis">powerful</span> enough to handle anything we throw at it</p>
+					</section>
+					<section>
+						<h2>Angular 6</h2>
+						<ul>
+							<li class="fragment">We have experience with it!</li>
+							<li class="fragment">Modular</li>
+							<li class="fragment">Powerful CLI tool</li>
+							<li class="fragment">Subpar documentation <span class="fragment"><span class="emphasis">Excellent</span> community support</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>SASS</h2>
+						<ul>
+							<li class="fragment">Extremely easy to use</li>
+							<li class="fragment">Angular already supports it</li>
+							<li class="fragment">Is a superset of CSS</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Database</h2>
+					<h4>MongoDB</h4>
+					<ul>
+						<li class="fragment">Mongoose is very easy to learn</li>
+						<li class="fragment">Dynamic</li>
+						<li class="fragment">Very very fast</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Challenges</h2>
+					<ul>
+						<li class="fragment"><span class="redEmphasis">Passport.js</span></li>
+						<li class="fragment">CORS</li>
+						<li class="fragment">Node.js environment</li>
+						<li class="fragment">Web Design (we're <span class="redEmphasis">awful</span> at it)</li>
+						<li class="fragment">Tokens Authentication</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Deleted or Delayed Features</h2>
+					<div class="row">
+						<div class="column">
+							<ul>
+								<li class="fragment" data-fragment-index="1"><span class="emphasis">Liking</span> animals and keeping tabs on them</li>
+								<li class="fragment" data-fragment-index="2">Public use <span class="emphasis">API</span></li>
+								<li class="fragment" data-fragment-index="3">GPS-based search limiting</li>
+								<li class="fragment" data-fragment-index="5">Robust options</li>
+							</ul>
+						</div>
+						<div class="column">
+							<img src="Assets/globeMath.JPG" id="globemath" class="fragment" data-fragment-index="4">
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Conclusion</h2>
+					<p>The project was deceptively difficult, with authorization and persistent login sessions taking up about half of our time. The time constraints imposed upon us were probably the most stressful aspect of development, this experience has taught us how time management is one of the more difficult and most easily underestimated parts of development.</p>
+				</section>
+			</div>
+		</div>
+		<script src="/reveal.js/js/reveal.js"></script>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
